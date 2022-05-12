@@ -1,0 +1,8 @@
+{
+    "demo": {
+        "title": "翻譯演示",
+        "text": "這是一個簡單的 ngx-translate 示範 app",
+        "greeting": "哈囉 {{ name }}!",
+        "paragraph": "試試 <strong>BabelEdit</strong>! 這個翻譯編輯器是為了 <strong>ngx-translate</strong>! 而生"
+    }
+}
