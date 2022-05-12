@@ -27,6 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-## Nodt
+## Alert
 
 In git history, at step 7, script extract-translations in package.json is a workaround method which needs to be noticed! 
+
+
+## Reference
+
+This project is based on a tutorial from https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular-app-with-ngx-translate#optional-create-an-angular-project

@@ -1,28 +1,18 @@
 <div>
-    <h1>{{ 'demo.title' | translate }}</h1>
+  <h2>ngx-translate-message format-compiler demo</h2>
 
-    <!-- translation: translation pipe -->
-    <p>{{ 'demo.text' | translate }}</p>
+  <h3>Pluralization</h3>
+  <ul>
+    <li translate="" [translateParams]="{ count: 1 }">icu.pluralization</li>
+    <li>{{'icu.pluralization' | translate:{ 'count': 2 } }}</li>
+  </ul>
 
-    <!-- translation: directive (key as attribute)-->
-    <p [translate]="'demo.text'"></p>
+  <h3>Selection</h3>
+  <ul>
+    <li translate [translateParams]="{ 'gender': 'male', 'product': 'BabelEdit' }">icu.select</li>
+    <li>{{'icu.select' | translate:{ 'gender': 'other', 'product': 'BabelEdit' } }}</li>
+  </ul>
 
-    <!-- translation: directive (key as content of element) -->
-    <p translate>demo.text</p>
-
-    <!-- translation with parameters: translation pipe -->
-    <p>{{ 'demo.greeting' | translate: { 'name':'Andreas' } }}</p>
-
-    <!-- translation: directive (key as attribute) -->
-    <p [translate]="'demo.greeting'" [translateParams]="{ name: 'Andreas' }"></p>
-
-    <!-- translation: directive (key as content of element)-->
-    <p translate [translateParams]="{ name: 'Andreas' }">demo.greeting</p>
-
-    <!-- Using HTML formatted messages -->
-    <p [innerHTML]="'demo.paragraph' | translate"></p>
-
-    <button (click)="useLanguage('en')">en</button>
-
-    <button (click)="useLanguage('cn')">cn</button>
+  <button (click)="useLanguage('en')">en</button>
+  <button (click)="useLanguage('de')">de</button>
 </div>
