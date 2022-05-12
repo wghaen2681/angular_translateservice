@@ -1,4 +1,24 @@
 <div>
-  <h1>Translation demo</h1>
-  <p>This is a simple demonstration app for ngx-translate</p>
+    <h1>{{ 'demo.title' | translate }}</h1>
+
+    <!-- translation: translation pipe -->
+    <p>{{ 'demo.text' | translate }}</p>
+
+    <!-- translation: directive (key as attribute)-->
+    <p [translate]="'demo.text'"></p>
+
+    <!-- translation: directive (key as content of element) -->
+    <p translate>demo.text</p>
+
+    <!-- translation with parameters: translation pipe -->
+    <p>{{ 'demo.greeting' | translate: { 'name':'Andreas' } }}</p>
+
+    <!-- translation: directive (key as attribute) -->
+    <p [translate]="'demo.greeting'" [translateParams]="{ name: 'Andreas' }"></p>
+
+    <!-- translation: directive (key as content of element)-->
+    <p translate [translateParams]="{ name: 'Andreas' }">demo.greeting</p>
+
+    <!-- Using HTML formatted messages -->
+    <p [innerHTML]="'demo.paragraph' | translate"></p>
 </div>
